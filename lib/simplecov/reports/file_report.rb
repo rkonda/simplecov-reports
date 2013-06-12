@@ -3,6 +3,7 @@
 # Stats are generated per file, but also summarized for the element of interest.
 # The elements are for example, 'api' calls. 'class'es and 'method's.
 #
+require "simplecov"
 
 include SimpleCov
 

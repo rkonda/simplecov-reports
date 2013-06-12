@@ -1,6 +1,10 @@
 #
 # Enhancements to SimpleCov::Configuration for generating reports
 #
+require "simplecov"
+
+include SimpleCov
+
 module SimpleCov::Configuration
 
   module ReportTypes

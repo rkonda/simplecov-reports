@@ -5,6 +5,8 @@
 require "algorithms"
 require "simplecov"
 
+require_relative "../source_file"
+
 include SimpleCov
 
 module SimpleCov
