@@ -1,5 +1,7 @@
 require "simplecov-html"
 
+GEM_ROOT = File.expand_path(File.join(File.dirname(__FILE__), ".."))
+
 include SimpleCov::Formatter
 
 class SimpleCov::Formatter::HTMLFormatter
@@ -37,3 +39,4 @@ formatters = {
 
 HTMLFormatter.add_report_formatters(formatters)
 
+HTMLFormatter.erb_files.append_path(File.join(GEM_ROOT, "views"))
