@@ -32,6 +32,7 @@ class SimpleCov::Formatter::HTMLFormatter
   end
 end
 
+# Add report formatters
 formatters = {
   :file_report => :formatted_file_report,
   :author_report => :formatted_author_report
@@ -39,4 +40,9 @@ formatters = {
 
 HTMLFormatter.add_report_formatters(formatters)
 
+# Author report would like to add author information to the source file view
+HTMLFormatter::Views::SourceFile.add_line_attribute "author", lambda { |line| line.author }
+HTMLFormatter::Views::SourceFile.add_line_attribute "authored_data", lambda { |line| line.date }
+
+# Add the "views" directory in this gem as a path to finding erb files
 HTMLFormatter.erb_files.append_path(File.join(GEM_ROOT, "views"))
