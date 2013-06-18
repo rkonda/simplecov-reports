@@ -1,8 +1,6 @@
 require "ooyala-grit"
 require "simplecov"
 
-include SimpleCov
-
 module SimpleCov
   class SourceFile
     class Line

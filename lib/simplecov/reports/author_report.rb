@@ -4,13 +4,9 @@
 
 require "algorithms"
 require "simplecov"
-
 require_relative "../source_file"
 
-include SimpleCov
-
 module SimpleCov
-
   class AuthorReport < Report
     attr_reader :author_stats_mapping, :best_author_stats_mapping
 
@@ -184,4 +180,4 @@ module SimpleCov
 
 end # module SimpleCov
 
-Report.register(:author_report, SimpleCov::AuthorReport)
+SimpleCov::Report.register(:author_report, SimpleCov::AuthorReport)

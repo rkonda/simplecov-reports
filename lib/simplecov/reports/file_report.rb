@@ -5,10 +5,7 @@
 #
 require "simplecov"
 
-include SimpleCov
-
 module SimpleCov
-
   class FileReport < Report
     BLOCK_END_REGEX = /^(?<indent>\s*)end\s*$/
 
@@ -92,4 +89,4 @@ module SimpleCov
 
 end # module SimpleCov
 
-Report.register(:file_report, SimpleCov::FileReport)
+SimpleCov::Report.register(:file_report, SimpleCov::FileReport)

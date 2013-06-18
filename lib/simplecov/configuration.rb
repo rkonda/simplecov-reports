@@ -3,8 +3,6 @@
 #
 require "simplecov"
 
-include SimpleCov
-
 module SimpleCov::Configuration
 
   module ReportTypes
