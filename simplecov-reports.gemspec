@@ -22,6 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
 
   spec.add_dependency "ooyala-grit"
-  spec.add_dependency "simplecov", "0.9.1.ooyala"
-  spec.add_dependency "simplecov-html", "0.7.4.ooyala"
+  spec.add_dependency "simplecov", "0.9.2.ooyala"
+  spec.add_dependency "simplecov-html", "0.7.5.ooyala"
 end
