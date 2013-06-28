@@ -10,7 +10,7 @@ puts "Rajesh 9"
 puts "Rajesh 10"
 
 # author=="AuthorTesterOne"
-if coverage=="cover"
+if COVERAGE == "cover"
   puts "Author-1 101"
   puts "Author-1 102"
   puts "Author-1 103"
