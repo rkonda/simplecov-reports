@@ -21,12 +21,12 @@ class TestFileReports < Test::Unit::TestCase
         class_coverage_report = @result.reports[index][:items]
 
         ## files
-        files_in_report = class_coverage_report.keys.map(&:filename).collect{ |item|
-                            item.slice /simplecov-reports(.*)/, 1 }
+        files_in_report = class_coverage_report.keys.map(&:filename).
+                            collect{ |item| item.slice(/simplecov-reports(.*)/, 1) }
 
         expected_files_in_report = [
-          "/test/fixtures/classes_covered.rb",
-          "/test/fixtures/classes_not_covered.rb"
+          "/test/fixtures/file_report/classes_covered.rb",
+          "/test/fixtures/file_report/classes_not_covered.rb"
         ]
 
         assert_equal expected_files_in_report, files_in_report,
@@ -50,21 +50,21 @@ class TestFileReports < Test::Unit::TestCase
     context "methods coverage" do
       should "be reported as appropriate" do
         index = 2
-        assert_equal :file_report, @result.reports[2][:type][:main], "The second report is a 'file report'"
-        assert_equal :method, @result.reports[2][:type][:subtype],
+        assert_equal :file_report, @result.reports[index][:type][:main], "The second report is a 'file report'"
+        assert_equal :method, @result.reports[index][:type][:subtype],
                      "The second report is the 'methods missing coverage'"
 
-        method_coverage_report = @result.reports[2][:items]
+        method_coverage_report = @result.reports[index][:items]
 
         ## files
-        files_in_report = method_coverage_report.keys.map(&:filename).collect{ |item|
-                            item.slice /simplecov-reports(.*)/, 1 }
+        files_in_report = method_coverage_report.keys.map(&:filename).
+                            collect{ |item| item.slice(/simplecov-reports(.*)/, 1) }
 
-        expected_files_in_report = ["/test/fixtures/classes_covered.rb",
-                                    "/test/fixtures/classes_not_covered.rb",
-                                    "/test/fixtures/classes_partially_covered.rb",
-                                    "/test/fixtures/methods_covered.rb",
-                                    "/test/fixtures/methods_not_covered.rb"]
+        expected_files_in_report = ["/test/fixtures/file_report/classes_covered.rb",
+                                    "/test/fixtures/file_report/classes_not_covered.rb",
+                                    "/test/fixtures/file_report/classes_partially_covered.rb",
+                                    "/test/fixtures/file_report/methods_covered.rb",
+                                    "/test/fixtures/file_report/methods_not_covered.rb"]
 
         assert_equal expected_files_in_report, files_in_report,
                      "MCR: The file list doesn't match the expected set"

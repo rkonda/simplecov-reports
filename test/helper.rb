@@ -35,12 +35,12 @@ end
 
 start_simplecov
 
-require_relative "fixtures/classes_covered"
-require_relative "fixtures/classes_not_covered"
-require_relative "fixtures/classes_partially_covered"
-require_relative "fixtures/methods_covered"
-require_relative "fixtures/methods_not_covered"
-require_relative "fixtures/methods_partially_covered"
+require_relative "fixtures/file_report/classes_covered"
+require_relative "fixtures/file_report/classes_not_covered"
+require_relative "fixtures/file_report/classes_partially_covered"
+require_relative "fixtures/file_report/methods_covered"
+require_relative "fixtures/file_report/methods_not_covered"
+require_relative "fixtures/file_report/methods_partially_covered"
 
 # Covered classes
 CoveredClass_Empty_None.new
