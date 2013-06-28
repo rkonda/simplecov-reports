@@ -35,37 +35,5 @@ end
 
 start_simplecov
 
-require_relative "fixtures/file_report/classes_covered"
-require_relative "fixtures/file_report/classes_not_covered"
-require_relative "fixtures/file_report/classes_partially_covered"
-require_relative "fixtures/file_report/methods_covered"
-require_relative "fixtures/file_report/methods_not_covered"
-require_relative "fixtures/file_report/methods_partially_covered"
-
-# Covered classes
-CoveredClass_Empty_None.new
-CoveredClass_Empty_BlankLine.new
-CoveredClass_Empty_Comments.new
-CoveredClass_Code.new.coveredClass_Code_method
-CoveredClass_BlankLine_Code.new.coveredClass_BlankLine_Code_method
-CoveredClass_Comment_Code.new.coveredClass_Comment_Code_method
-
-# Partially covered classes
-PartiallyCoveredClass.new.covered_method
-
-# Covered methods
-CoveredMethod.new.emptyMethod
-CoveredMethod.new.emptyMethod_BlankLine
-CoveredMethod.new.emptyMethod_Comments
-CoveredMethod.new.method_Code
-CoveredMethod.new.method_BlankLine_Code
-CoveredMethod.new.method_Comment_Code
-
-# Non-covered methods
-NonCoveredMethod.new.covered_method
-
-# Partially covered methods
-PartiallyCoveredMethod.new.partially_covered_method true
-
 
 
