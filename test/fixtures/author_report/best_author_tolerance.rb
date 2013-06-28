@@ -50,3 +50,17 @@ else
   puts "Author-3 308"
   puts "Author-3 309"
 end
+
+# author=="AuthorTesterFour"
+if COVERAGE == "cover"
+else
+  puts "Author-3 301"
+  puts "Author-3 302"
+  puts "Author-3 303"
+  puts "Author-3 304"
+  puts "Author-3 305"
+  puts "Author-3 306"
+  puts "Author-3 307"
+  puts "Author-3 308"
+  puts "Author-3 309"
+end
