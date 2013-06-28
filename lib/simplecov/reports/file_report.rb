@@ -46,6 +46,11 @@ module SimpleCov
         file.lines.each_with_index do |line, line_number|
           line = file.lines[line_number]
           method_started = @block_start_regex.match(line.source)
+          if method_started && line.missed?
+            @report[:items][file] << line
+            next
+          end
+
           next_line = file.lines[line_number + 1]
           missed_next_line = method_started && next_line.missed?
           if method_started && missed_next_line
@@ -56,25 +61,25 @@ module SimpleCov
           method_ends_on_same_line = /\bend\s*$/.match(line.source)
           if method_started && method_ends_on_same_line
             # line.source += " *"
-            @report[:items][file] << line
             next
           end
 
           next_line = file.lines[line_number + 1]
           next_line_excluded = method_started && next_line.never?
           if method_started && next_line_excluded
+            method_start_line = line
             begin
+              line_number += 1
               line = file.lines[line_number]
               method_ended = BLOCK_END_REGEX.match(line.source)
               method_ended = method_ended && method_started["indent"].length >= method_ended["indent"].length
               next_line_included = !line.never?
-              line_number += 1
             end until method_ended || next_line_included
 
             missed_next_line = line.missed?
-            if method_ended || missed_next_line
+            if missed_next_line
               # line.source += " **"
-              @report[:items][file] << line
+              @report[:items][file] << method_start_line
             end
           end
         end # file.lines.each
