@@ -23,3 +23,17 @@ else
   puts "Author-1 109"
 end
 
+# author=="AuthorTesterTwo"
+if COVERAGE == "cover"
+  puts "Author-2 201"
+else
+  puts "Author-2 202"
+  puts "Author-2 203"
+  puts "Author-2 204"
+  puts "Author-2 205"
+  puts "Author-2 206"
+  puts "Author-2 207"
+  puts "Author-2 208"
+  puts "Author-2 209"
+end
+
