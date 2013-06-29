@@ -251,14 +251,14 @@ end
 # author=="AuthorTesterFour"
 # (5/10) 50% coverage
 if COVERAGE == "cover"
-  puts "Author-4 401"
-  puts "Author-4 402"
-  puts "Author-4 403"
-  puts "Author-4 404"
+  line = "Author-4 401"
+  line = "Author-4 402"
+  line = "Author-4 403"
+  line = "Author-4 404"
 else
-  puts "Author-4 405"
-  puts "Author-4 406"
-  puts "Author-4 407"
-  puts "Author-4 408"
-  puts "Author-4 409"
+  line = "Author-4 405"
+  line = "Author-4 406"
+  line = "Author-4 407"
+  line = "Author-4 408"
+  line = "Author-4 409"
 end
