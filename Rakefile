@@ -6,6 +6,7 @@ task :test => [
   "test_all_reports",
   "test_best_author",
   "test_file_reports",
+  "test_html_reports",
   "test_line_enhancer"
 ]
 
@@ -56,6 +57,12 @@ end
 Rake::TestTask.new(:test_file_reports) do |test|
   test.libs << 'lib' << 'test'
   test.test_files = FileList['test/test_file_reports.rb']
+  test.verbose = true
+end
+
+Rake::TestTask.new(:test_html_reports) do |test|
+  test.libs << 'lib' << 'test'
+  test.test_files = FileList['test/test_html_reports.rb']
   test.verbose = true
 end
 
