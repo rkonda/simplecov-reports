@@ -54,16 +54,20 @@ module SimpleCov::Configuration
         { :type => :author_report,
           :options => {
             :report_types => {},
-            :best_authors_count => options.has_key?(:best_authors_count) ? options[:best_authors_count]
-            : 3,
-            :best_author_tolerance => options.has_key?(:best_author_tolerance) ? options[:best_author_tolerance]
-            : 50.00,
-            :best_author_cutoff => options.has_key?(:best_author_cutoff) ? options[:best_author_cutoff]
-            : 15.00,
-            :author_report_from => options.has_key?(:author_report_from) ? options[:author_report_from]
-            : "1900-12-31 00:00:00 -0000",
-            :author_report_to => options.has_key?(:author_report_to) ? options[:author_report_to]
-            : "2025-12-31 00:00:00 -0000"
+            :best_authors_count =>
+              options.has_key?(:best_authors_count) ? options[:best_authors_count] : 3,
+
+            :best_author_tolerance =>
+              options.has_key?(:best_author_tolerance) ? options[:best_author_tolerance] : 50.00,
+
+            :best_author_cutoff =>
+              options.has_key?(:best_author_cutoff) ? options[:best_author_cutoff] : 15.00,
+
+            :author_report_from =>
+              options.has_key?(:author_report_from) ? options[:author_report_from] : "1900-12-31 00:00:00 -0000",
+
+            :author_report_to =>
+              options.has_key?(:author_report_to) ? options[:author_report_to] : "2025-12-31 00:00:00 -0000"
           }
         }
 
