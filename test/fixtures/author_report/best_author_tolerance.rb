@@ -161,9 +161,9 @@ if COVERAGE == "cover"
   puts "Author-1 158"
   puts "Author-1 159"
   puts "Author-1 160"
-else
   puts "Author-1 161"
   puts "Author-1 162"
+else
   puts "Author-1 163"
   puts "Author-1 164"
   puts "Author-1 165"
@@ -171,7 +171,6 @@ else
   puts "Author-1 167"
   puts "Author-1 168"
   puts "Author-1 169"
-  puts "Author-1 170"
 end
 
 # author=="AuthorTesterTwo"
