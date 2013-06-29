@@ -143,15 +143,13 @@ module SimpleCov
       significant_authors_queue.push(most_total_author,
                                      @author_stats_mapping[most_total_author][:total_coverage][:coverage])
       author_count = 1
-      while (author_name = all_authors_queue.pop) != nil &&
+      while(author_name = all_authors_queue.pop) != nil &&
         (
-        comparable( @author_stats_mapping[most_total_author][:total_coverage][:total],
-                    @author_stats_mapping[author_name][:total_coverage][:total]
-        ) ||
+          comparable( @author_stats_mapping[most_total_author][:total_coverage][:total],
+                    @author_stats_mapping[author_name][:total_coverage][:total]) ||
           (
-          comparable_cutoff( @author_stats_mapping[most_total_author][:total_coverage][:total],
-                             @author_stats_mapping[author_name][:total_coverage][:total]
-          ) &&
+            comparable_cutoff( @author_stats_mapping[most_total_author][:total_coverage][:total],
+                             @author_stats_mapping[author_name][:total_coverage][:total]) &&
             author_count < @options[:best_authors_count]
           )
         )
@@ -161,8 +159,7 @@ module SimpleCov
       end
 
       author_count = 0
-      while (author_name = significant_authors_queue.pop) != nil &&
-        author_count < @options[:best_authors_count]
+      while (author_name = significant_authors_queue.pop) != nil
         @best_author_stats_mapping[author_name] = @author_stats_mapping[author_name]
         author_count += 1
       end
