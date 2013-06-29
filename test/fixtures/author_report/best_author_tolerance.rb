@@ -206,14 +206,14 @@ end
 
 # author=="AuthorTesterFour"
 if COVERAGE == "cover"
+  puts "Author-4 401"
 else
-  puts "Author-3 301"
-  puts "Author-3 302"
-  puts "Author-3 303"
-  puts "Author-3 304"
-  puts "Author-3 305"
-  puts "Author-3 306"
-  puts "Author-3 307"
-  puts "Author-3 308"
-  puts "Author-3 309"
+  puts "Author-4 402"
+  puts "Author-4 403"
+  puts "Author-4 404"
+  puts "Author-4 405"
+  puts "Author-4 406"
+  puts "Author-4 407"
+  puts "Author-4 408"
+  puts "Author-4 409"
 end
