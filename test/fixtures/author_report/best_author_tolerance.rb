@@ -214,6 +214,7 @@ else
 end
 
 # author=="AuthorTesterThree"
+# (12/30) 40% coverage
 if COVERAGE == "cover"
   puts "Author-3 301"
   puts "Author-3 302"
@@ -226,13 +227,13 @@ if COVERAGE == "cover"
   puts "Author-3 309"
   puts "Author-3 310"
   puts "Author-3 311"
+else
   puts "Author-3 312"
   puts "Author-3 313"
   puts "Author-3 314"
   puts "Author-3 315"
   puts "Author-3 316"
   puts "Author-3 317"
-else
   puts "Author-3 318"
   puts "Author-3 319"
   puts "Author-3 320"
