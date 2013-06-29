@@ -179,6 +179,7 @@ else
 end
 
 # author=="AuthorTesterTwo"
+# (9/30) 30% coverage
 if COVERAGE == "cover"
   puts "Author-2 201"
   puts "Author-2 202"
@@ -188,6 +189,7 @@ if COVERAGE == "cover"
   puts "Author-2 206"
   puts "Author-2 207"
   puts "Author-2 208"
+else
   puts "Author-2 209"
   puts "Author-2 210"
   puts "Author-2 211"
@@ -200,7 +202,6 @@ if COVERAGE == "cover"
   puts "Author-2 218"
   puts "Author-2 219"
   puts "Author-2 220"
-else
   puts "Author-2 221"
   puts "Author-2 222"
   puts "Author-2 223"
