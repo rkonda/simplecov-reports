@@ -104,6 +104,7 @@ else
 end
 
 # author=="AuthorTesterOne"
+# (14/70) 20% coverage
 if COVERAGE == "cover"
   puts "Author-1 101"
   puts "Author-1 102"
@@ -118,6 +119,7 @@ if COVERAGE == "cover"
   puts "Author-1 111"
   puts "Author-1 112"
   puts "Author-1 113"
+else
   puts "Author-1 114"
   puts "Author-1 115"
   puts "Author-1 116"
@@ -167,7 +169,6 @@ if COVERAGE == "cover"
   puts "Author-1 160"
   puts "Author-1 161"
   puts "Author-1 162"
-else
   puts "Author-1 163"
   puts "Author-1 164"
   puts "Author-1 165"
