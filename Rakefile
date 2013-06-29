@@ -5,7 +5,8 @@ require 'rake/testtask'
 task :test => [
   "test_all_reports",
   "test_best_author",
-  "test_file_reports"
+  "test_file_reports",
+  "test_line_enhancer"
 ]
 
 Rake::TestTask.new(:test_all_reports) do |test|
@@ -55,5 +56,11 @@ end
 Rake::TestTask.new(:test_file_reports) do |test|
   test.libs << 'lib' << 'test'
   test.test_files = FileList['test/test_file_reports.rb']
+  test.verbose = true
+end
+
+Rake::TestTask.new(:test_line_enhancer) do |test|
+  test.libs << 'lib' << 'test'
+  test.test_files = FileList['test/test_line_enhancer.rb']
   test.verbose = true
 end
