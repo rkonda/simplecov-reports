@@ -25,7 +25,7 @@ require_relative "fixtures/author_report/best_author_tolerance"
 # Author: AuthorTesterFour has 50% coverage with 10 lines of code
 
 
-class TestAuthorReports < Test::Unit::TestCase
+class TestBestAuthorReport < Test::Unit::TestCase
   context "author report" do
     context "/best author report" do
       setup do
