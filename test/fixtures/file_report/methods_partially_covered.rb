@@ -4,9 +4,9 @@
 class PartiallyCoveredMethod
   def partially_covered_method(flag)
     if flag
-      puts "yes"
+      method = "yes"
     else
-      puts "no"
+      method = "no"
     end
   end
 end

@@ -17,23 +17,23 @@ class NonCoveredMethod
 
   # Methods with code in them
   def method_Code
-    puts "method_Code"
+    method = "method_Code"
   end
 
   def method_Comment_Code
     # first comment
 
-    puts "method_Comment_Code"
+    method = "method_Comment_Code"
   end
 
   def method_BlankLine_Code
 
-    puts "method_BlankLine_Code"
+    method = "method_BlankLine_Code"
   end
 
   # Methods that are covered, just for sakes
   def covered_method
-    puts "I am covered"
+    method = "I am covered"
   end
 end
 
