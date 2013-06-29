@@ -12,3 +12,12 @@ else
   line = "Author-1 8"
   line = "Author-1 9"
 end
+
+# author=="AuthorTesterTwo"
+# (1/4) 25% coverage
+if COVERAGE == "cover"
+else
+  line = "Author-2 1"
+  line = "Author-2 2"
+  line = "Author-2 3"
+end
