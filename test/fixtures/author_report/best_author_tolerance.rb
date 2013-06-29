@@ -249,12 +249,13 @@ else
 end
 
 # author=="AuthorTesterFour"
+# (5/10) 50% coverage
 if COVERAGE == "cover"
   puts "Author-4 401"
-else
   puts "Author-4 402"
   puts "Author-4 403"
   puts "Author-4 404"
+else
   puts "Author-4 405"
   puts "Author-4 406"
   puts "Author-4 407"
