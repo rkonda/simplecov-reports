@@ -1,7 +1,8 @@
 require_relative 'helper'
 
 SimpleCov.start do
-  use_merging false
+  use_merging true
+  merge_timeout 3600
 
   add_report(:type => SimpleCov::Configuration::ReportTypes::Author,
              :sub_types => [
