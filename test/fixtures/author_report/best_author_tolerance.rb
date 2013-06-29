@@ -226,10 +226,10 @@ if COVERAGE == "cover"
   puts "Author-3 315"
   puts "Author-3 316"
   puts "Author-3 317"
+else
   puts "Author-3 318"
   puts "Author-3 319"
   puts "Author-3 320"
-else
   puts "Author-3 321"
   puts "Author-3 322"
   puts "Author-3 323"
@@ -239,7 +239,6 @@ else
   puts "Author-3 327"
   puts "Author-3 328"
   puts "Author-3 329"
-  puts "Author-3 330"
 end
 
 # author=="AuthorTesterFour"
