@@ -21,3 +21,6 @@ if COVERAGE == "cover"
   line = "Author-3 3"
 else
 end
+
+# author=="AuthorTesterFour"
+# (0/0) coverage is NA
