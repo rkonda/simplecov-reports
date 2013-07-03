@@ -1,5 +1,5 @@
 module Simplecov
   module Reports
-    VERSION = "0.0.3.ooyala"
+    VERSION = "0.0.4.ooyala"
   end
 end

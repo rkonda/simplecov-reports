@@ -24,6 +24,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "shoulda"
 
   spec.add_dependency "ooyala-grit"
-  spec.add_dependency "simplecov", "0.9.2.ooyala"
-  spec.add_dependency "simplecov-html", "0.7.5.ooyala"
+  spec.add_dependency "simplecov", "0.9.3.ooyala"
+  spec.add_dependency "simplecov-html", "0.7.6.ooyala"
 end
