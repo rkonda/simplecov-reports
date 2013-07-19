@@ -13,8 +13,6 @@ module SimpleCov
 
   SimpleCov::SourceFile.add_line_enhancer(lambda do |lines, filename|
       author_info = []
-      # TODO (rkonda, 04/24/2013): Get the git repo where this file exists. Follow the directory, resolve the links,
-      # then git the actual directory, then get the git repo from there.
       root_dir = Grit::Git.new(Dir.pwd).native(:rev_parse, {:base => false}, "--show-toplevel").chomp
       repo = Grit::Repo.new(root_dir)
       begin

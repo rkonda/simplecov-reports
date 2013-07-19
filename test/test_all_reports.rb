@@ -18,7 +18,7 @@ end
 
 # Tests the scenario where all possible reports are configured
 # Tests whether all the reports are generated
-#TODO (rkonda, 06/27/2013): Add tests
+#TODO (rkonda, 06/27/2013): Add more tests
 class TestAllReports < Test::Unit::TestCase
   context "tests: " do
     setup do
